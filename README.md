@@ -1,4 +1,4 @@
-## Day 1: https://chatgpt.com/c/c080711b-05eb-4f13-b82d-fcf57b6d324d
+## Day 1 homework: https://chatgpt.com/c/7fd82b67-95ae-40d0-8237-69ddea278948
 
 # OpenAI 快速入门
 
