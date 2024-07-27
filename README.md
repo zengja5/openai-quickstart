@@ -1,4 +1,16 @@
-## Day 1 homework: https://chatgpt.com/c/7fd82b67-95ae-40d0-8237-69ddea278948
+## Day 1: 
+chatgpt link: https://chatgpt.com/c/7fd82b67-95ae-40d0-8237-69ddea278948
+## Day 2: 
+- **gpt4v**：能描述手写图的内容，并且能够回答出图中提到的问题
+- **chains**：扩展了提示词模板，并支持生物、计算机和汉语文学的问答。
+- **ai translator**：
+    - 支持多种语言的翻译 ( --target_language )
+    - 支持翻译指定的页数，并翻译了部分《老人与海》 ( --pages )
+## Day 3: 
+- 网络运营商AI客服（network_service_sales_chatbot）
+    - 生成了行业数据并存到向量数据库
+    - 当向量数据库检索不到结果时，将交由语言模型进一步礼貌提示用户(不会暴露自己是AI)，否则返回随机的提示性回答
+
 
 # OpenAI 快速入门
 
