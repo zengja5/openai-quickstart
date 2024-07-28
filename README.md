@@ -10,6 +10,7 @@ chatgpt link: https://chatgpt.com/c/7fd82b67-95ae-40d0-8237-69ddea278948
 - 网络运营商AI客服（network_service_sales_chatbot）
     - 生成了行业数据并存到向量数据库
     - 当向量数据库检索不到结果时，将交由语言模型进一步礼貌提示用户(不会暴露自己是AI)，否则返回随机的提示性回答
+    - 命令行参数化是否开启语言模型聊天模式（--enable_chat）
 
 
 # OpenAI 快速入门
