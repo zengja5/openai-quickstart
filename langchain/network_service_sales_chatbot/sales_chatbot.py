@@ -4,6 +4,7 @@ from langchain_openai import OpenAIEmbeddings
 from langchain.chains import RetrievalQA
 from langchain_openai import ChatOpenAI
 from langchain_community.vectorstores import FAISS
+from openai import OpenAI
 
 import os
 import random
@@ -38,13 +39,23 @@ def sales_chat(message, history):
     print(f"[history]{history}")
 
     ans = SALES_BOT({"query": message})
+
+    client = OpenAI()
+    messages=[
+        {"role": "system", "content": '你是一个礼貌的、乐于助人的网络运营商的人工客服。'},
+    ]
     
     # 如果检索出结果，返回结果
     if ans["source_documents"]:
         return ans["result"]
-    # 如果没有检索出结果但启用了语言模型，返回设定模型的人设并回答该问题
+    # 如果没有检索出结果但启用了语言模型，返回设定模型的系统身份并回答该问题
     elif enable_chat:
-        return SALES_BOT({"query": '当一个网络运营商的客服没有办法回答这个问题：' + message + ', 该如何友好回应客户?'})["result"]
+        messages.append({"role": "user", "content": message})
+        data = client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages = messages
+        )
+        return data.choices[0].message.content
     # 否则返回后备的question
     else:
         return random.choice(fallback_questions)
