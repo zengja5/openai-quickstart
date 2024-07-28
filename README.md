@@ -1,5 +1,5 @@
 ## Day 1: 
-chatgpt link: https://chatgpt.com/c/7fd82b67-95ae-40d0-8237-69ddea278948
+chatgpt link: https://chatgpt.com/c/52088d59-02b7-4dca-9553-982580b7403a
 ## Day 2: 
 - **gpt4v**：能描述手写图的内容，并且能够回答出图中提到的问题
 - **chains**：扩展了提示词模板，并支持生物、计算机和汉语文学的问答。
